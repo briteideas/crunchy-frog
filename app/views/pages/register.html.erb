@@ -1,9 +1,9 @@
 <h1>Crunchy Frog</h1>
 <p class="description">An entertainment guide for your inbox.</p>
-<form>
+<%= form_for :user, class: "signupForm" do |f| %>
   <div id="input-wrapper">
-    <input type="text" name="email" placeholder="email address">
-    <input type="password" name="password" placeholder="password">
+    <%= f.text_field :email, placeholder: "email address" %>
+    <%= f.text_field :password, placeholder: "password" %>
   </div>
-  <input type="submit" value="Give me emails!">
-</form>
+  <%= f.submit "Give me emails!" %>
+<% end %>
