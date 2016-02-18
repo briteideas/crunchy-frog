@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'pages#register'
+  root 'users#new'
 
-  get 'sign-up' => 'pages#register'
+  get 'sign-up' => 'users#new'
   get "/pages/:page" => "pages#show"
 
   # Example of regular route:
