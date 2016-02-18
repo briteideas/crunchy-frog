@@ -2,84 +2,83 @@ $primary-color: #f43f68;
 $primary-dk: #c33253;
 
 body {
-	background: $primary-color;
-	margin: auto;
-	height: 100vh;
-	min-width: 100%;
-	position: relative;
-	width: 100%;
+  background: $primary-color;
+  margin: auto;
+  height: 100vh;
+  min-width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 h1, h2, h3 {
-	color: #999;
-	font-family: Arial, sans-serif;
-	font-size: 24px;
-	font-weight: bold;
-	margin: 0 0 8px;
-	text-align: center;
+  color: #999;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 8px;
+  text-align: center;
 }
 
 p.description {
-	color: #999;
-	font-family: Arial, sans-serif;
-	font-size: 16px;
-	font-weight: normal;
-	margin: 0 0 24px;
-	text-align: center;
+  color: #999;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0 0 24px;
+  text-align: center;
 }
 
 #left-column {
-	background: #efefef;
-	display: table;
-	height: 100%;
-	margin: auto;
-	min-width: 320px;
-	width: 100%;
+  background: #efefef;
+  display: table;
+  height: 100%;
+  margin: auto;
+  min-width: 320px;
+  width: 100%;
 }
 
 #left-wrapper {
-	bottom: 0;
-	display: table-cell;
-	height: auto;
-	vertical-align: middle;
+  bottom: 0;
+  display: table-cell;
+  height: auto;
+  vertical-align: middle;
 }
 
 #input-wrapper {
-	border-radius: 5px;
-	box-shadow: 0 2px 2px 0 #ccc;
-	margin: 0 auto;
-	max-width: 280px;
-	overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 #ccc;
+  margin: 0 auto;
+  max-width: 280px;
+  overflow: hidden;
 }
 
 input[type="text"],
 input[type="password"] {
-	border: none;
-	border-bottom: solid 1px #eee;
-	color: #565a5c;
-	font-size: 16px;
-	height: 30px;
-	padding: 5px 0;
-	text-align: center;
-	width: 100%;
+  border: none;
+  border-bottom: solid 1px #eee;
+  color: #565a5c;
+  font-size: 16px;
+  height: 30px;
+  padding: 5px 0;
+  text-align: center;
+  width: 100%;
 }
 
 input[type="submit"] {
-	background: $primary-color;
-	border: none;
-	border-bottom: solid 3px $primary-dk;
-	border-radius: 5px;
-	color: #fff;
-	display: block;
-	font-size: 14px;
-	padding: 12px 25px;
-	margin: 10px auto;
-	max-width: 280px;
-	text-align: center;
-	width: 100%;
+  background: $primary-color;
+  border: none;
+  border-bottom: solid 3px $primary-dk;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  padding: 12px 25px;
+  margin: 10px auto;
+  max-width: 280px;
+  text-align: center;
+  width: 100%;
 }
 
 input[type="submit"]:active {
-	background: $primary-dk;
-
+  background: $primary-dk;
 }
