@@ -10,7 +10,20 @@ feature 'Visitor signs up' do
     fill_in "user[email]", with: "bruce@spam.org"
     click_button "Give me emails!"
 
+    expect(page).to have_content("You've signed up successfully")
     expect(User.count).to eq(1)
-    # Should redirect to thank you page
+  end
+
+  scenario 'with an existing email' do
+
+    2.times do
+        visit sign_up_path
+        fill_in "user[email]", with: "bruce@spam.org"
+        click_button "Give me emails!"
+    end
+
+    expect(page).to have_content("Whoops")
+    expect(page).to have_content("Email has already been taken")
+    expect(User.count).to eq(1)
   end
 end
