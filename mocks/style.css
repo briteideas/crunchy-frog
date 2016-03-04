@@ -6,7 +6,8 @@ h1, h2, h3 {
   margin: 0 0 8px;
   text-align: center; }
 
-p.description {
+p.description,
+ul.signup-errors {
   color: #999;
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -24,6 +25,10 @@ body {
   min-width: 100%;
   position: relative;
   width: 100%; }
+
+ul.signup-errors {
+  padding: 0;
+}
 
 #left-column {
   background: #efefef;
