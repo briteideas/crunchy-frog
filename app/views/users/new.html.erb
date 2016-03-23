@@ -1,4 +1,4 @@
-<h1>couchbot.com</h1>
+<h1>couchbot</h1>
 <p class="description">The weekly guide of the best ways to waste your time.</p>
 <%= form_for @user, class: "signupForm" do |f| %>
   <div id="input-wrapper">
@@ -18,4 +18,24 @@
     <li><%= message_error %></li>
   <% end %>
   </ul>
+<% end %>
+
+<% content_for :right_column do %>
+  <div class="feature">
+    <h2>Tired of having too much Netflix to watch?</h2>
+  </div>
+  <div class="feature">
+    <h2>Are there too many awesome games out there?</h2>
+  </div>
+  <div class="feature">
+    <h2>Don't cry like a teeny, tiny baby!</h2>
+  </div>
+  <div class="feature">
+    <h2>Get a weekly guide right in your inbox.</h2>
+  </div>
+  <div class="feature">
+    <h2>Start being happy, dummy!</h2>
+  </div>
+  <div class="feature">
+  </div>
 <% end %>
