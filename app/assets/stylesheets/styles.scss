@@ -1,13 +1,7 @@
-$primary-color: #f43f68;
-$primary-dk: #c33253;
-
-$amber: #FFC107;
-$cyan: #00BCD4;
-$lime: #AEEA00;
-$purple: #E040FB;
-$footer: #546E7A;
-
+@import 'variables';
+@import 'colors';
 @import 'typography';
+@import 'errors';
 
 body {
   height: 100vh;
@@ -24,7 +18,7 @@ body {
   height: 100%;
   margin: auto;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $min-mobile-width) {
     position: fixed;
   }
 
@@ -38,7 +32,7 @@ body {
     right: 0;
     width: 100%;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $min-mobile-width) {
       display: none;
     }
   }
@@ -70,7 +64,7 @@ body {
 #right-column {
   width: 100%;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $min-mobile-width) {
     width: 50%;
   }
 }
@@ -146,7 +140,7 @@ body {
     padding: 30px;
     width: 100%;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $min-mobile-width) {
       height: 400px;
     }
 
@@ -165,11 +159,11 @@ body {
     background: image-url("5wKZQPC.gif") center no-repeat;
     background-size: auto 100%;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $min-mobile-width) {
       background-size: auto 110%;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $min-desktop-width) {
       background-size: 105% auto;
     }
   }
@@ -178,11 +172,11 @@ body {
     background: image-url("JZVQ7CS.gif") center 0 no-repeat;
     background-size: auto 100%;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $min-mobile-width) {
       background-size: auto 110%;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $min-desktop-width) {
       background-size: 120% auto;
     }
   }
@@ -195,7 +189,7 @@ body {
       background-size: auto 110%;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $min-desktop-width) {
       background-size: 120% auto;
     }
   }
@@ -208,7 +202,7 @@ body {
       background-size: auto 115%;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $min-desktop-width) {
       background-size: 105% auto;
     }
   }
@@ -221,7 +215,7 @@ body {
       background-size: auto 110%;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $min-desktop-width) {
       background-size: 105% auto;
     }
   }
