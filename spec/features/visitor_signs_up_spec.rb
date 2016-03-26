@@ -29,3 +29,10 @@ feature 'Visitor signs up' do
     expect(User.count).to eq(1)
   end
 end
+
+feature 'Visitor visits landing page' do
+  scenario 'sees features' do
+    visit sign_up_path
+    expect(page).to have_selector '.feature', 5
+  end
+end
