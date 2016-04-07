@@ -1,0 +1,28 @@
+p.description,
+ul.signup-errors {
+  color: #999;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0 0 24px;
+  text-align: center; }
+
+ul.signup-errors {
+  padding: 0;
+  list-style: none;
+}
+
+.notice--valid,
+.notice--invalid {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 24px;
+  text-align: center; }
+
+.notice--valid {
+  color: #5bb75b;
+}
+.notice--invalid {
+  color: #da4f49;
+}
