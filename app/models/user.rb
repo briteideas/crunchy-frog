@@ -5,10 +5,19 @@ class User < ActiveRecord::Base
   def register
     g = Gibbon::Request.new
     begin
-      g.lists('6ab8309ea1').members.create(body: {email_address: email, status: "subscribed"})
+      g.lists(list_id)
+        .members
+        .create(body: {email_address: email, status: "subscribed"})
     rescue Gibbon::MailChimpError => e
+      # TODO: Report proper errors?
       puts "Houston, we have a problem: #{e.message} - #{e.raw_body}"
     end
+  end
+
+  private
+
+  def list_id
+    Rails.application.secrets.list_id
   end
 
 end
