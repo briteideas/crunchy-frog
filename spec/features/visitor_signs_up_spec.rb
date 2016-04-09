@@ -1,6 +1,13 @@
 require 'spec_helper'
+require 'gibbon_helper'
 
 feature 'Visitor signs up' do
+  let(:user) { FactoryGirl.build :user }
+
+  after :each do
+    purge_member user
+  end
+
   scenario 'via email' do
     visit sign_up_path
     expect(page).to have_field("user[email]")
@@ -9,7 +16,7 @@ feature 'Visitor signs up' do
     expect(page).to have_content("couchbot")
     expect(page).to have_content("The weekly guide of the best ways to waste your time.")
 
-    fill_in "user[email]", with: "bruce@spam.org"
+    fill_in "user[email]", with: "#{user.email}"
     click_button "Give me emails!"
 
     expect(page).to have_content("You've signed up successfully")
@@ -19,9 +26,9 @@ feature 'Visitor signs up' do
   scenario 'with an existing email' do
 
     2.times do
-        visit sign_up_path
-        fill_in "user[email]", with: "bruce@spam.org"
-        click_button "Give me emails!"
+      visit sign_up_path
+      fill_in "user[email]", with: "#{user.email}"
+      click_button "Give me emails!"
     end
 
     expect(page).to have_content("Whoops")
